@@ -5,6 +5,7 @@ VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{33503453-9B81-43EF-BB23-1A8EB3B90FB9}"
 	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
 		Solution.TXT = Solution.TXT
 		std.css = std.css
 		Windows Forms Applications.htm = Windows Forms Applications.htm
