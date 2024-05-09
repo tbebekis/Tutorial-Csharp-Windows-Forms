@@ -1,0 +1,63 @@
+BODY {
+	background-color : #EEEEEE;
+	color : #000000;
+	font-family : Arial, Tahoma, Helvetica, sans-serif; 
+} 
+
+H1 {
+	color : Navy; 
+	font-family : Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size : 150%;
+	border : thin groove;
+	text-align : center;
+	margin-bottom : -0.5em;
+}
+
+H2 {
+	color : Navy;
+	font-variant: small-caps;
+	font-family : Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size : 130%;
+	margin-top : 1.5em;
+	margin-bottom : -0.5em;
+	border : thin groove;
+	}
+
+
+H3 {
+   color : Navy;
+	font-family : Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size : 110%;
+	border-bottom-style : solid;
+	margin-bottom : -0.5em;
+}
+
+
+H4 {
+	color : Background;
+	font-family : Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size : 120%;
+	background-color : Silver;
+	margin-bottom : -0.5em;
+}
+
+
+H5 {
+	color : Background;
+	font-family : Verdana, Tahoma, Arial, Helvetica, sans-serif;
+	font-size : 110%;
+	font-weight : 900;
+	margin-bottom : -0.5em;
+}
+
+
+H6 {
+	font-family : Arial, Helvetica, sans-serif;
+	font-size : 90%;
+	font-weight : 800;
+	text-align : center;
+}
+
+p.note {
+    border: Background solid thin; 
+}
