@@ -2,154 +2,154 @@ C# Windows Forms Applications
 ==========================
 
 - [C# Windows Forms Applications](#c-windows-forms-applications)
-    - [Introduction to Windows Forms](#introduction-to-windows-forms)
-      - [IDE and tools](#ide-and-tools)
-        - [Form Designer](#form-designer)
-        - [Property Grid](#property-grid)
-        - [Toolbox](#toolbox)
-        - [Code editor](#code-editor)
-      - [Creating a Windows Forms application](#creating-a-windows-forms-application)
-      - [The Program class and the Main() method](#the-program-class-and-the-main-method)
-      - [Messages and events](#messages-and-events)
-      - [Screen class](#screen-class)
-      - [SystemInformation class](#systeminformation-class)
-      - [Environment class](#environment-class)
-      - [OSFeature class](#osfeature-class)
-      - [PowerStatus class](#powerstatus-class)
-    - [Application class, application types and Forms](#application-class-application-types-and-forms)
-      - [The static Application class](#the-static-application-class)
-      - [The Main Form and the ApplicationContext class](#the-main-form-and-the-applicationcontext-class)
-      - [Multiple Document Interface (MDI) applications](#multiple-document-interface-mdi-applications)
-      - [Single Document Interface (SDI) applications](#single-document-interface-sdi-applications)
-        - [The Owner property](#the-owner-property)
-      - [Modal forms](#modal-forms)
-      - [The Form.Close() case](#the-formclose-case)
-      - [The power of the visual form inheritance](#the-power-of-the-visual-form-inheritance)
-    - [Components and Controls](#components-and-controls)
-      - [Component class and Control Class](#component-class-and-control-class)
-      - [Parentship](#parentship)
-      - [Screen and client coordinates](#screen-and-client-coordinates)
-      - [The Form class](#the-form-class)
-      - [The Form Designer as a code generation tool](#the-form-designer-as-a-code-generation-tool)
-    - [Control common properties and operations](#control-common-properties-and-operations)
-      - [Layout](#layout)
-      - [The Point, Rectangle and Size structs](#the-point-rectangle-and-size-structs)
-        - [Point struct](#point-struct)
-        - [Rectangle struct](#rectangle-struct)
-        - [Size struct](#size-struct)
-      - [Control position and size](#control-position-and-size)
-        - [Size constraints](#size-constraints)
-        - [Client and non-client area](#client-and-non-client-area)
-        - [The Z-order](#the-z-order)
-      - [Dock and Anchor properties](#dock-and-anchor-properties)
-      - [Control common appearance properties](#control-common-appearance-properties)
-        - [Colors](#colors)
-        - [Text](#text)
-        - [Font](#font)
-        - [Cursor](#cursor)
-      - [Ambient properties](#ambient-properties)
-      - [ToolTip component and extender providers](#tooltip-component-and-extender-providers)
-      - [TabIndex and TabStop properties](#tabindex-and-tabstop-properties)
-    - [Windows messages](#windows-messages)
-      - [Message processing in Windows Forms](#message-processing-in-windows-forms)
-        - [IMessageFilter](#imessagefilter)
-        - [Control.PreProcessMessage()](#controlpreprocessmessage)
-        - [Control.WndProc()](#controlwndproc)
-        - [Control.DefWndProc()](#controldefwndproc)
-        - [Control.OnNotifyMessage()](#controlonnotifymessage)
-      - [Windows and the NativeWindow class](#windows-and-the-nativewindow-class)
-    - [User input](#user-input)
-      - [Keyboard input](#keyboard-input)
-        - [Form.KeyPrieview property](#formkeyprieview-property)
-      - [The KeyCrack helper class](#the-keycrack-helper-class)
-      - [Preprocessing keys](#preprocessing-keys)
-        - [KeyDown event preprocessing](#keydown-event-preprocessing)
-        - [KeyPress event preprocessing](#keypress-event-preprocessing)
-      - [Processing keys](#processing-keys)
-      - [The Keyboard class and the SendKeys class](#the-keyboard-class-and-the-sendkeys-class)
-      - [Mouse input](#mouse-input)
-        - [Hit-testing](#hit-testing)
-      - [Mouse capture](#mouse-capture)
-      - [Mouse events](#mouse-events)
-      - [Mouse clicks](#mouse-clicks)
-      - [Mouse move](#mouse-move)
-    - [Drag and drop](#drag-and-drop)
-      - [The drag source](#the-drag-source)
-      - [The drop target](#the-drop-target)
-      - [Drag and drop examples](#drag-and-drop-examples)
-      - [Clipboard class](#clipboard-class)
-    - [Validation and the ErrorProvider component](#validation-and-the-errorprovider-component)
-    - [Windows Forms built-in controls and components](#windows-forms-built-in-controls-and-components)
-      - [Buttons](#buttons)
-        - [Button](#button)
-        - [CheckBox](#checkbox)
-        - [RadioButton](#radiobutton)
-      - [TextBox](#textbox)
-      - [MaskedTextBox](#maskedtextbox)
-      - [RichTextBox](#richtextbox)
-      - [List controls: ComboBox, ListBox and CheckedListBox](#list-controls-combobox-listbox-and-checkedlistbox)
-        - [ComboBox](#combobox)
-        - [ListBox](#listbox)
-        - [CheckedListBox](#checkedlistbox)
-      - [ProgressBar](#progressbar)
-      - [MonthCalendar](#monthcalendar)
-      - [DateTimePicker](#datetimepicker)
-      - [NumericUpDown](#numericupdown)
-      - [ListView](#listview)
-      - [TreeView](#treeview)
-      - [Dialog boxes](#dialog-boxes)
-      - [PictureBox](#picturebox)
-      - [Menus, tool bars and status bars](#menus-tool-bars-and-status-bars)
-      - [Other standard controls and components](#other-standard-controls-and-components)
-        - [Label and LinkLabel](#label-and-linklabel)
-        - [DataGridView](#datagridview)
-        - [DataGrid](#datagrid)
-        - [WebBrowser](#webbrowser)
-        - [ImageList](#imagelist)
-        - [Timer](#timer)
-        - [NotifyIcon](#notifyicon)
-      - [The remarkable UserControl control](#the-remarkable-usercontrol-control)
-    - [Configuration: application and user settings](#configuration-application-and-user-settings)
-      - [Configuration files](#configuration-files)
-      - [Accessing configuration settings by code](#accessing-configuration-settings-by-code)
-    - [Application resources](#application-resources)
-      - [Adding resources to a project](#adding-resources-to-a-project)
-      - [Accessing resources by code at runtime](#accessing-resources-by-code-at-runtime)
-    - [World-ready applications](#world-ready-applications)
-      - [The notion of culture and the CultureInfo class](#the-notion-of-culture-and-the-cultureinfo-class)
-      - [Invariant, neutral and specific cultures](#invariant-neutral-and-specific-cultures)
-      - [Culture hierarchy](#culture-hierarchy)
-      - [Application culture](#application-culture)
-        - [CurrentUICulture](#currentuiculture)
-        - [CurrentCulture](#currentculture)
-      - [User overrides](#user-overrides)
-      - [RegionInfo class](#regioninfo-class)
-      - [Custom cultures and the CultureAndRegionInfoBuilder class](#custom-cultures-and-the-cultureandregioninfobuilder-class)
-      - ["There Ain't No Such Thing As Plain Text" (as Joel Spolsky said)](#there-aint-no-such-thing-as-plain-text-as-joel-spolsky-said)
-        - [ASCII](#ascii)
-        - [OEM character sets](#oem-character-sets)
-        - [ANSI code pages](#ansi-code-pages)
-        - [Double-byte and Multi-byte character sets](#double-byte-and-multi-byte-character-sets)
-        - [Unicode](#unicode)
-        - [Encodings](#encodings)
-      - [Encoding class](#encoding-class)
-        - [Encoding and decoding operations](#encoding-and-decoding-operations)
-      - [About CLR strings and characters](#about-clr-strings-and-characters)
-      - [TextInfo class](#textinfo-class)
-      - [String comparison](#string-comparison)
-        - [Comparison operations use the culture of the current thread](#comparison-operations-use-the-culture-of-the-current-thread)
-        - [Three different ways of comparing and sorting strings](#three-different-ways-of-comparing-and-sorting-strings)
-      - [NumberFormatInfo class](#numberformatinfo-class)
-      - [DateTimeFormatInfo class](#datetimeformatinfo-class)
-      - [Calendar class](#calendar-class)
-        - [Other classes related to date and time](#other-classes-related-to-date-and-time)
-    - [Localization: making a multi-lingual application](#localization-making-a-multi-lingual-application)
-      - [Localizing a form](#localizing-a-form)
-      - [Localizing general string resources](#localizing-general-string-resources)
-      - [Setting application culture](#setting-application-culture)
-      - [Localization tools](#localization-tools)
-      - [](#)
-          - [Copyright � 2009 Theodoros Bebekis, Thessaloniki, Greece (teo point bebekis at gmail point com)](#copyright--2009-theodoros-bebekis-thessaloniki-greece-teo-point-bebekis-at-gmail-point-com)
+		- [Introduction to Windows Forms](#introduction-to-windows-forms)
+			- [IDE and tools](#ide-and-tools)
+				- [Form Designer](#form-designer)
+				- [Property Grid](#property-grid)
+				- [Toolbox](#toolbox)
+				- [Code editor](#code-editor)
+			- [Creating a Windows Forms application](#creating-a-windows-forms-application)
+			- [The Program class and the Main() method](#the-program-class-and-the-main-method)
+			- [Messages and events](#messages-and-events)
+			- [Screen class](#screen-class)
+			- [SystemInformation class](#systeminformation-class)
+			- [Environment class](#environment-class)
+			- [OSFeature class](#osfeature-class)
+			- [PowerStatus class](#powerstatus-class)
+		- [Application class, application types and Forms](#application-class-application-types-and-forms)
+			- [The static Application class](#the-static-application-class)
+			- [The Main Form and the ApplicationContext class](#the-main-form-and-the-applicationcontext-class)
+			- [Multiple Document Interface (MDI) applications](#multiple-document-interface-mdi-applications)
+			- [Single Document Interface (SDI) applications](#single-document-interface-sdi-applications)
+				- [The Owner property](#the-owner-property)
+			- [Modal forms](#modal-forms)
+			- [The Form.Close() case](#the-formclose-case)
+			- [The power of the visual form inheritance](#the-power-of-the-visual-form-inheritance)
+		- [Components and Controls](#components-and-controls)
+			- [Component class and Control Class](#component-class-and-control-class)
+			- [Parentship](#parentship)
+			- [Screen and client coordinates](#screen-and-client-coordinates)
+			- [The Form class](#the-form-class)
+			- [The Form Designer as a code generation tool](#the-form-designer-as-a-code-generation-tool)
+		- [Control common properties and operations](#control-common-properties-and-operations)
+			- [Layout](#layout)
+			- [The Point, Rectangle and Size structs](#the-point-rectangle-and-size-structs)
+				- [Point struct](#point-struct)
+				- [Rectangle struct](#rectangle-struct)
+				- [Size struct](#size-struct)
+			- [Control position and size](#control-position-and-size)
+				- [Size constraints](#size-constraints)
+				- [Client and non-client area](#client-and-non-client-area)
+				- [The Z-order](#the-z-order)
+			- [Dock and Anchor properties](#dock-and-anchor-properties)
+			- [Control common appearance properties](#control-common-appearance-properties)
+				- [Colors](#colors)
+				- [Text](#text)
+				- [Font](#font)
+				- [Cursor](#cursor)
+			- [Ambient properties](#ambient-properties)
+			- [ToolTip component and extender providers](#tooltip-component-and-extender-providers)
+			- [TabIndex and TabStop properties](#tabindex-and-tabstop-properties)
+		- [Windows messages](#windows-messages)
+			- [Message processing in Windows Forms](#message-processing-in-windows-forms)
+				- [IMessageFilter](#imessagefilter)
+				- [Control.PreProcessMessage()](#controlpreprocessmessage)
+				- [Control.WndProc()](#controlwndproc)
+				- [Control.DefWndProc()](#controldefwndproc)
+				- [Control.OnNotifyMessage()](#controlonnotifymessage)
+			- [Windows and the NativeWindow class](#windows-and-the-nativewindow-class)
+		- [User input](#user-input)
+			- [Keyboard input](#keyboard-input)
+				- [Form.KeyPrieview property](#formkeyprieview-property)
+			- [The KeyCrack helper class](#the-keycrack-helper-class)
+			- [Preprocessing keys](#preprocessing-keys)
+				- [KeyDown event preprocessing](#keydown-event-preprocessing)
+				- [KeyPress event preprocessing](#keypress-event-preprocessing)
+			- [Processing keys](#processing-keys)
+			- [The Keyboard class and the SendKeys class](#the-keyboard-class-and-the-sendkeys-class)
+			- [Mouse input](#mouse-input)
+				- [Hit-testing](#hit-testing)
+			- [Mouse capture](#mouse-capture)
+			- [Mouse events](#mouse-events)
+			- [Mouse clicks](#mouse-clicks)
+			- [Mouse move](#mouse-move)
+		- [Drag and drop](#drag-and-drop)
+			- [The drag source](#the-drag-source)
+			- [The drop target](#the-drop-target)
+			- [Drag and drop examples](#drag-and-drop-examples)
+			- [Clipboard class](#clipboard-class)
+		- [Validation and the ErrorProvider component](#validation-and-the-errorprovider-component)
+		- [Windows Forms built-in controls and components](#windows-forms-built-in-controls-and-components)
+			- [Buttons](#buttons)
+				- [Button](#button)
+				- [CheckBox](#checkbox)
+				- [RadioButton](#radiobutton)
+			- [TextBox](#textbox)
+			- [MaskedTextBox](#maskedtextbox)
+			- [RichTextBox](#richtextbox)
+			- [List controls: ComboBox, ListBox and CheckedListBox](#list-controls-combobox-listbox-and-checkedlistbox)
+				- [ComboBox](#combobox)
+				- [ListBox](#listbox)
+				- [CheckedListBox](#checkedlistbox)
+			- [ProgressBar](#progressbar)
+			- [MonthCalendar](#monthcalendar)
+			- [DateTimePicker](#datetimepicker)
+			- [NumericUpDown](#numericupdown)
+			- [ListView](#listview)
+			- [TreeView](#treeview)
+			- [Dialog boxes](#dialog-boxes)
+			- [PictureBox](#picturebox)
+			- [Menus, tool bars and status bars](#menus-tool-bars-and-status-bars)
+			- [Other standard controls and components](#other-standard-controls-and-components)
+				- [Label and LinkLabel](#label-and-linklabel)
+				- [DataGridView](#datagridview)
+				- [DataGrid](#datagrid)
+				- [WebBrowser](#webbrowser)
+				- [ImageList](#imagelist)
+				- [Timer](#timer)
+				- [NotifyIcon](#notifyicon)
+			- [The remarkable UserControl control](#the-remarkable-usercontrol-control)
+		- [Configuration: application and user settings](#configuration-application-and-user-settings)
+			- [Configuration files](#configuration-files)
+			- [Accessing configuration settings by code](#accessing-configuration-settings-by-code)
+		- [Application resources](#application-resources)
+			- [Adding resources to a project](#adding-resources-to-a-project)
+			- [Accessing resources by code at runtime](#accessing-resources-by-code-at-runtime)
+		- [World-ready applications](#world-ready-applications)
+			- [The notion of culture and the CultureInfo class](#the-notion-of-culture-and-the-cultureinfo-class)
+			- [Invariant, neutral and specific cultures](#invariant-neutral-and-specific-cultures)
+			- [Culture hierarchy](#culture-hierarchy)
+			- [Application culture](#application-culture)
+				- [CurrentUICulture](#currentuiculture)
+				- [CurrentCulture](#currentculture)
+			- [User overrides](#user-overrides)
+			- [RegionInfo class](#regioninfo-class)
+			- [Custom cultures and the CultureAndRegionInfoBuilder class](#custom-cultures-and-the-cultureandregioninfobuilder-class)
+			- ["There Ain't No Such Thing As Plain Text" (as Joel Spolsky said)](#there-aint-no-such-thing-as-plain-text-as-joel-spolsky-said)
+				- [ASCII](#ascii)
+				- [OEM character sets](#oem-character-sets)
+				- [ANSI code pages](#ansi-code-pages)
+				- [Double-byte and Multi-byte character sets](#double-byte-and-multi-byte-character-sets)
+				- [Unicode](#unicode)
+				- [Encodings](#encodings)
+			- [Encoding class](#encoding-class)
+				- [Encoding and decoding operations](#encoding-and-decoding-operations)
+			- [About CLR strings and characters](#about-clr-strings-and-characters)
+			- [TextInfo class](#textinfo-class)
+			- [String comparison](#string-comparison)
+				- [Comparison operations use the culture of the current thread](#comparison-operations-use-the-culture-of-the-current-thread)
+				- [Three different ways of comparing and sorting strings](#three-different-ways-of-comparing-and-sorting-strings)
+			- [NumberFormatInfo class](#numberformatinfo-class)
+			- [DateTimeFormatInfo class](#datetimeformatinfo-class)
+			- [Calendar class](#calendar-class)
+				- [Other classes related to date and time](#other-classes-related-to-date-and-time)
+		- [Localization: making a multi-lingual application](#localization-making-a-multi-lingual-application)
+			- [Localizing a form](#localizing-a-form)
+			- [Localizing general string resources](#localizing-general-string-resources)
+			- [Setting application culture](#setting-application-culture)
+			- [Localization tools](#localization-tools)
+			- [](#)
+					- [Copyright � 2009 Theodoros Bebekis, Thessaloniki, Greece (teo point bebekis at gmail point com)](#copyright--2009-theodoros-bebekis-thessaloniki-greece-teo-point-bebekis-at-gmail-point-com)
 
  
 ### Introduction to Windows Forms
@@ -192,7 +192,7 @@ Along with the single Form, the new project wizard creates the Program class in 
 
     static class Program
     {
-        \[STAThread\]
+        [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
@@ -205,7 +205,7 @@ NOTE: For an explanation of the STAThread attribute see the Threading tutorial.
 
 The static Program class contains the required static Main() method which is the main entry point of the application. The Main() method may have arguments passed to it. Those arguments are known as command line arguments. The wizard omits the parameter but the user can it them manually.
 
-    static void Main(string\[\] Args)
+    static void Main(string[] Args)
     {    
         string S = "";
         foreach (string arg in Args)
@@ -232,7 +232,7 @@ Messages sent to an application are in fact turned into events, exposed by the v
 
 While an event handler is executed the application is busy executing that event handler code and has no chance to see if new messages are sent by the system. So, long running event handlers can make the application unresponsive to user actions. The Application.DoEvents() method allows the application to handle any messages came in between.
 
-    private void button1\_Click(object sender, EventArgs e)
+    private void button1_Click(object sender, EventArgs e)
     {
         if (!looping)
         {
@@ -253,7 +253,7 @@ In above example, commenting the call
 
     Application.DoEvents();
 
-results in an unresponsive application for as long as the button1\_Click() executes.
+results in an unresponsive application for as long as the button1_Click() executes.
 
 There could be more than one event handlers attached to a single event. In fact attaching an event handler to an event can be done manually.
 
@@ -275,7 +275,7 @@ The System.Windows.Forms.Screen class provides information about the display dev
 
     public class Screen
     {
-        public static Screen\[\] AllScreens { get; }
+        public static Screen[] AllScreens { get; }
         public int BitsPerPixel { get; }
         public Rectangle Bounds { get; }
         public string DeviceName { get; }
@@ -436,13 +436,13 @@ Another useful class that provides information about the current environment and
         public static void Exit(int exitCode);
         public static string ExpandEnvironmentVariables(string name);
         public static void FailFast(string message);
-        public static string\[\] GetCommandLineArgs();
+        public static string[] GetCommandLineArgs();
         public static string GetEnvironmentVariable(string variable);
         public static string GetEnvironmentVariable(string variable, EnvironmentVariableTarget target);
         public static IDictionary GetEnvironmentVariables();
         public static IDictionary GetEnvironmentVariables(EnvironmentVariableTarget target);
         public static string GetFolderPath(Environment.SpecialFolder folder);
-        public static string\[\] GetLogicalDrives();
+        public static string[] GetLogicalDrives();
         public static void SetEnvironmentVariable(string variable, string value);
         public static void SetEnvironmentVariable(string variable, string value, EnvironmentVariableTarget target);
 
@@ -477,7 +477,7 @@ Another useful class that provides information about the current environment and
 
 Among other properties the Environment class provides a CommandLine string property.
 
-        private void button2\_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
             string S = "";
             S += string.Format("CommandLine: {0}", Environment.CommandLine) + Environment.NewLine;
@@ -669,7 +669,7 @@ The System.Windows.Forms.ApplicationContext class provides a read-write MainForm
 
 Here is a possible use of the ApplicationContext.
 
-        \[STAThread\]
+        [STAThread]
         static void Main()
         {
             using (ApplicationContext AppContext = new ApplicationContext())
@@ -717,7 +717,7 @@ returns true if the form is an MDI child.
 
 The MdiChildren array property
 
-    public Form\[\] MdiChildren { get; }
+    public Form[] MdiChildren { get; }
     
 
 of an MDI container form, returns an array containing its MDI children. Only one of those children could be active at any given time. The ActiveMdiChild property
@@ -730,7 +730,7 @@ of an MDI container form returns the currently active child, if any, or null. Th
 
 of an MDI container is triggered whenever a child is activated or closed.
 
-    private void MainForm\_MdiChildActivate(object sender, EventArgs e)
+    private void MainForm_MdiChildActivate(object sender, EventArgs e)
     {
         if (ActiveMdiChild == null)
             lblActiveChild.Text = "";
@@ -799,7 +799,7 @@ Here is an example of an MDI container main form that provides a status bar and 
         {
             InitializeComponent();
 
-            /\* assign MdiLayout values to menu item tags \*/
+            /* assign MdiLayout values to menu item tags */
             this.mnuCascade.Tag = MdiLayout.Cascade;
             this.mnuTileHorizontal.Tag = MdiLayout.TileHorizontal;
             this.mnuTileVertical.Tag = MdiLayout.TileVertical;
@@ -808,14 +808,14 @@ Here is an example of an MDI container main form that provides a status bar and 
 
         static int Counter = 0;
 
-        private void mnuExit\_Click(object sender, EventArgs e)
+        private void mnuExit_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void mnuNew\_Click(object sender, EventArgs e)
+        private void mnuNew_Click(object sender, EventArgs e)
         {
-            /\* create and display a MDI child form \*/
+            /* create and display a MDI child form */
             ChildForm Form = new ChildForm();
             Form.MdiParent = this;
             Form.Text = "Child " + Counter.ToString();
@@ -823,9 +823,9 @@ Here is an example of an MDI container main form that provides a status bar and 
             Form.Show();
         }
 
-        /\* the MdiChildActivate event is triggered when a MDI child form is activated or closed.   
-           The ActiveMdiChild property provides access to the currently activated MDI child, if any \*/
-        private void MainForm\_MdiChildActivate(object sender, EventArgs e)
+        /* the MdiChildActivate event is triggered when a MDI child form is activated or closed.   
+           The ActiveMdiChild property provides access to the currently activated MDI child, if any */
+        private void MainForm_MdiChildActivate(object sender, EventArgs e)
         {
             if (ActiveMdiChild == null)
                 lblActiveChild.Text = "";
@@ -833,8 +833,8 @@ Here is an example of an MDI container main form that provides a status bar and 
                 lblActiveChild.Text = ActiveMdiChild.Text;
         }
 
-        /\* a common event handler for all the menu items that handle the layout of the MDI child forms  \*/
-        private void AnyMdiLayoutMenuItem\_Click(object sender, EventArgs e)
+        /* a common event handler for all the menu items that handle the layout of the MDI child forms  */
+        private void AnyMdiLayoutMenuItem_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem MI = (ToolStripMenuItem)sender;
             MdiLayout value = (MdiLayout)MI.Tag;
@@ -878,7 +878,7 @@ The AddOwnedForm() and RemoveOwnedForm() methods
 
 can be used instead of the Owner property. Also the OwnedForms property
 
-    public Form\[\] OwnedForms { get; }
+    public Form[] OwnedForms { get; }
     
 
 returns an array of the owned forms.
@@ -1250,7 +1250,7 @@ And here is the public interface of those two fundamental classes.
         public event EventHandler VisibleChanged;
 
         public IAsyncResult BeginInvoke(Delegate method);
-        public IAsyncResult BeginInvoke(Delegate method, params object\[\] args);
+        public IAsyncResult BeginInvoke(Delegate method, params object[] args);
         public void BringToFront();
         public bool Contains(Control ctl);
         public void CreateControl();
@@ -1275,7 +1275,7 @@ And here is the public interface of those two fundamental classes.
         public void Invalidate(Rectangle rc, bool invalidateChildren);
         public void Invalidate(Region region, bool invalidateChildren);
         public object Invoke(Delegate method);
-        public object Invoke(Delegate method, params object\[\] args);
+        public object Invoke(Delegate method, params object[] args);
         public static bool IsKeyLocked(Keys keyVal);
         public static bool IsMnemonic(char charCode, string text);
         public void PerformLayout();
@@ -1324,15 +1324,15 @@ The Control.Controls property, of type Control.ControlCollection, is a collectio
 
             public Control Owner { get; }
 
-            public virtual Control this\[int index\] { get; }
-            public virtual Control this\[string key\] { get; }
+            public virtual Control this[int index] { get; }
+            public virtual Control this[string key] { get; }
 
             public virtual void Add(Control value);
-            public virtual void AddRange(Control\[\] controls);
+            public virtual void AddRange(Control[] controls);
             public virtual void Clear();
             public bool Contains(Control control);
             public virtual bool ContainsKey(string key);
-            public Control\[\] Find(string key, bool searchAllChildren);
+            public Control[] Find(string key, bool searchAllChildren);
             public int GetChildIndex(Control child);
             public virtual int GetChildIndex(Control child, bool throwException);
             public override IEnumerator GetEnumerator();
@@ -1502,7 +1502,7 @@ Here is the public interface of the Form class.
         public Padding Margin { get; set; }
         public bool MaximizeBox { get; set; }
         public override Size MaximumSize { get; set; }
-        public Form\[\] MdiChildren { get; }
+        public Form[] MdiChildren { get; }
         public Form MdiParent { get; set; }
         public MainMenu Menu { get; set; }
         public MainMenu MergedMenu { get; }
@@ -1510,7 +1510,7 @@ Here is the public interface of the Form class.
         public override Size MinimumSize { get; set; }
         public bool Modal { get; }
         public double Opacity { get; set; }
-        public Form\[\] OwnedForms { get; }
+        public Form[] OwnedForms { get; }
         public Form Owner { get; set; }
         public Rectangle RestoreBounds { get; }
         public virtual bool RightToLeftLayout { get; set; }
@@ -1600,14 +1600,14 @@ A Form object can act as a child as long as its TopLevel property is set to fals
 
             button = new Button();
             button.Parent = this;
-            button.Click += new EventHandler(button\_Click);
+            button.Click += new EventHandler(button_Click);
 
             button.Left = 10;
             button.Top = 10;
             button.Text = "Click me!";
         }
 
-        void button\_Click(object sender, EventArgs e)
+        void button_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hi there!");
         }
@@ -2236,7 +2236,7 @@ Many of those messages are turned into events in the application, form or contro
 
 The Application.MessageLoop read-only boolean property indicates whether that primary thread's message loop is started.
 
-Windows messages are represented by integer constants most of which are prefixed by a WM\_ which stands for Windows Message. When the WM\_QUIT message arrives to that message loop, the message loop exits and the application terminates.
+Windows messages are represented by integer constants most of which are prefixed by a WM_ which stands for Windows Message. When the WM_QUIT message arrives to that message loop, the message loop exits and the application terminates.
 
 When there are no messages to process the application calls the Application.Idle event.
 
@@ -2297,7 +2297,7 @@ Here is an example
 
     public partial class MainForm : Form
     {
-        const int WM\_CHAR = 258;
+        const int WM_CHAR = 258;
 
         public MainForm()
         {
@@ -2307,10 +2307,10 @@ Here is an example
         }
     }
 
-    /\* swallows any WM\_CHAR message carrying the character 'a', sent to this application \*/
+    /* swallows any WM_CHAR message carrying the character 'a', sent to this application */
     public class MessageFilter : IMessageFilter
     {
-        const int WM\_CHAR = 258;
+        const int WM_CHAR = 258;
         MainForm form;
 
         public MessageFilter(MainForm Form)
@@ -2321,18 +2321,18 @@ Here is an example
 
         public bool PreFilterMessage(ref Message m)
         {
-            if ((m.Msg == WM\_CHAR) && ((int)m.WParam == (int)'a'))
+            if ((m.Msg == WM_CHAR) && ((int)m.WParam == (int)'a'))
                 return true;
  
             return false;
         } 
     }
 
-NOTE: Windows message constants, such as the WM\_CHAR above, are defined in Windows SDK header files, primarily the WinUser.h and CommCtrl.h. Unfortunately there is no definition of those constants in BCL yet. Here is an article that may help: http://www.codeproject.com/KB/cs/cswindowsmessages.aspx on that matter.
+NOTE: Windows message constants, such as the WM_CHAR above, are defined in Windows SDK header files, primarily the WinUser.h and CommCtrl.h. Unfortunately there is no definition of those constants in BCL yet. Here is an article that may help: http://www.codeproject.com/KB/cs/cswindowsmessages.aspx on that matter.
 
 ##### Control.PreProcessMessage()
 
-After passing any installed message filter, a message is dispatched to the target control or form. If the message is a WM\_KEYDOWN, WM\_SYSKEYDOWN, WM\_CHAR, or WM\_SYSCHAR message, it first goes to the Control.PreProcessMessage() method.
+After passing any installed message filter, a message is dispatched to the target control or form. If the message is a WM_KEYDOWN, WM_SYSKEYDOWN, WM_CHAR, or WM_SYSCHAR message, it first goes to the Control.PreProcessMessage() method.
 
         public virtual bool PreProcessMessage(ref Message msg);
         
@@ -2345,7 +2345,7 @@ Regarding how a message reaches its target control there are two categories: pos
 
 Posted messages go first to the message queue and then they are handled by the application message loop. The primary tool for posting a message is the PostMessage() WinAPI function.
 
-    \[DllImport("user32.dll")\] 
+    [DllImport("user32.dll")] 
     public static extern int PostMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
 The PostMessage() function places the message in the message queue and returns immediately. That is the message is processed asynchronously. There can be many messages in that queue waiting for further processing. The application's message loop, strictly speaking the message loop of the primary thread, examines and processes those messages one by one.
@@ -2359,7 +2359,7 @@ NOTE: The Control.WndProc() method corresponds exactly to a WinAPI Windows Proce
 
 The primary tool for sending messages is the SendMessage() WinAPI function.
 
-    \[DllImport("user32.dll")\] 
+    [DllImport("user32.dll")] 
     public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
     
 
@@ -2371,7 +2371,7 @@ Here is an example that uses the WndProc() to write mouse click coordinates on a
 
     public partial class MainForm : Form
     {
-        const int WM\_LBUTTONDOWN = 513;
+        const int WM_LBUTTONDOWN = 513;
 
 
         /// <summary>
@@ -2398,9 +2398,9 @@ Here is an example that uses the WndProc() to write mouse click coordinates on a
         protected override void WndProc(ref Message m)
         {
         
-            /\* cracks the WM\_LBUTTONDOWN (left mouse button down) message and 
-               writes the click coordinates on the form \*/        
-            if (m.Msg == WM\_LBUTTONDOWN)
+            /* cracks the WM_LBUTTONDOWN (left mouse button down) message and 
+               writes the click coordinates on the form */        
+            if (m.Msg == WM_LBUTTONDOWN)
             {
                 using (Graphics g = Graphics.FromHwnd(this.Handle))
                 {
@@ -2491,22 +2491,22 @@ Here is an example that uses a custom message and the PostMessage() WinAPI funct
             customWindow = new CustomWindow(this);
         }
 
-        private void button1\_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            CustomWindow.PostMessage(customWindow.Handle, CustomWindow.UM\_TEST, 0, 0);
+            CustomWindow.PostMessage(customWindow.Handle, CustomWindow.UM_TEST, 0, 0);
         }
     }
 
-    /\* A NativeWindow descendant which uses the UM\_TEST custom message \*/
+    /* A NativeWindow descendant which uses the UM_TEST custom message */
     public class CustomWindow : NativeWindow
     {
-        static public readonly int WM\_USER  = 0x0400;
-        static public readonly int UM\_TEST = WM\_USER + 1;
+        static public readonly int WM_USER  = 0x0400;
+        static public readonly int UM_TEST = WM_USER + 1;
 
-        \[DllImport("user32.dll")\]
+        [DllImport("user32.dll")]
         public static extern int PostMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
-        \[DllImport("user32.dll")\]
+        [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
         MainForm form;
@@ -2519,7 +2519,7 @@ Here is an example that uses a custom message and the PostMessage() WinAPI funct
 
         protected override void WndProc(ref Message m)
         {
-            if (m.Msg == UM\_TEST)
+            if (m.Msg == UM_TEST)
             {
                 form.listBox1.Items.Add(DateTime.Now.ToLongTimeString());
             }
@@ -2550,7 +2550,7 @@ The sequence for pressing the Enter key is KewDown and KeyUp events. The sequenc
 
 While the user keeps pressed a key, a series of KeyDown events is generated. If the key is a character key, a series of KeyPress events is generated too. When the user releases the pressed key, just a single KeyUp is generated.
 
-The corresponding messages to those events are WM\_KEYDOWN, WM\_KEYUP and WM\_CHAR.
+The corresponding messages to those events are WM_KEYDOWN, WM_KEYUP and WM_CHAR.
 
 Windows Forms uses the System.Windows.Forms.Keys enum to represent key information. The Keys enum defines a constant for every key on the keyboard.
 
@@ -2789,7 +2789,7 @@ The SuppressKeyPress property when true prevents the target control from handlin
 
 Here is an example using the KeyDown event and a form.
 
-    private void MainForm\_KeyDown(object sender, KeyEventArgs e)
+    private void MainForm_KeyDown(object sender, KeyEventArgs e)
     {
         label1.Text = string.Format("KeyCode: {0}", e.KeyCode);
         label2.Text = string.Format("KeyData: {0}", e.KeyData);
@@ -3099,7 +3099,7 @@ The System.Windows.Forms.Cursor class represents the mouse cursor and contains u
 
 Cursor.Position property indicates the cursor position in screen coordinates while Cursor.HotSpot property indicates cursor position in client coordinates.
 
-    private void MainForm\_Click(object sender, EventArgs e)
+    private void MainForm_Click(object sender, EventArgs e)
     {
         string S = string.Format("x = {0}, y = {1} ( x = {2}, y = {3} )",
                                 System.Windows.Forms.Cursor.Position.X,
@@ -3270,8 +3270,8 @@ The first parameter of the DoDragDrop(), the data, is the data to drag. System.S
         bool GetDataPresent(string format);
         bool GetDataPresent(Type format);
         bool GetDataPresent(string format, bool autoConvert);
-        string\[\] GetFormats();
-        string\[\] GetFormats(bool autoConvert);
+        string[] GetFormats();
+        string[] GetFormats(bool autoConvert);
         void SetData(object data);
         void SetData(string format, object data);
         void SetData(Type format, object data);
@@ -3300,12 +3300,12 @@ The second case is more handy since there is already a very convenient class tha
         public virtual bool GetDataPresent(Type format);
         public virtual bool GetDataPresent(string format, bool autoConvert);
         public virtual StringCollection GetFileDropList();
-        public virtual string\[\] GetFormats();
-        public virtual string\[\] GetFormats(bool autoConvert);
+        public virtual string[] GetFormats();
+        public virtual string[] GetFormats(bool autoConvert);
         public virtual Image GetImage();
         public virtual string GetText();
         public virtual string GetText(TextDataFormat format);
-        public virtual void SetAudio(byte\[\] audioBytes);
+        public virtual void SetAudio(byte[] audioBytes);
         public virtual void SetAudio(Stream audioStream);
         public virtual void SetData(object data);
         public virtual void SetData(string format, object data);
@@ -3385,9 +3385,9 @@ However it is possible to use a custom data format to pass a custom object to th
 
 The DoDragDrop() method is usually called from inside a MouseDown event
 
-    private void SourceControl\_MouseDown(object sender, MouseEventArgs e)
+    private void SourceControl_MouseDown(object sender, MouseEventArgs e)
     {
-        /\* start the drag and drop operation immediately \*/
+        /* start the drag and drop operation immediately */
         if (e.Button == MouseButtons.Left)
             SourceControl.DoDragDrop(SourceControl.Text, DragDropEffects.Copy);
     }
@@ -3397,30 +3397,30 @@ or from inside a MouseMove event.
 
     Rectangle dragRect;
      
-    private void SourceControl\_MouseDown(object sender, MouseEventArgs e)
+    private void SourceControl_MouseDown(object sender, MouseEventArgs e)
     {
         dragRect = Rectangle.Empty;
         
-        /\* defer the beginning of the drag and drop operation to the MouseMove event \*/
+        /* defer the beginning of the drag and drop operation to the MouseMove event */
         if (e.Button == MouseButtons.Left)
         {                    
-            /\* SystemInformation.DragSize returns the Width and Height of a rectangle centered on the hot-spot.           
+            /* SystemInformation.DragSize returns the Width and Height of a rectangle centered on the hot-spot.           
                dragRect is a rectangle with DragSize dimensions centered on the hot-spot. 
-               The hot-spot, the mouse position, has to be moved outside of that dragRect for the DoDragDrop() to be called. \*/
+               The hot-spot, the mouse position, has to be moved outside of that dragRect for the DoDragDrop() to be called. */
             Size DragSize = SystemInformation.DragSize;   
             dragRect = new Rectangle(new Point(e.X - (DragSize.Width / 2), e.Y - (DragSize.Height / 2)), DragSize);       
         }           
     }
     
-    private void SourceControl\_MouseMove(object sender, MouseEventArgs e)
+    private void SourceControl_MouseMove(object sender, MouseEventArgs e)
     {
-        /\* if the mouse position moves outside the dragRect then begin the drag and drop operation \*/
+        /* if the mouse position moves outside the dragRect then begin the drag and drop operation */
         if (e.Button == MouseButtons.Left)
             if (dragRect != Rectangle.Empty && !dragRect.Contains(e.X, e.Y))  
                 SourceControl.DoDragDrop(SourceControl.Text, DragDropEffects.Copy);    
     }    
     
-    private void SourceControl\_MouseUp(object sender, MouseEventArgs e)
+    private void SourceControl_MouseUp(object sender, MouseEventArgs e)
     {
         dragRect = Rectangle.Empty;
     }
@@ -3514,7 +3514,7 @@ DragDrop event is raised once, when the user releases the mouse pointer over a d
 
 Inside the DragEnter event handler the drop target control can check the DragEventArgs.AllowedEffect property and respond by choosing the proper effect for itself, by setting the DragEventArgs.Effect property. The control refuses to be a drop target by setting Effect to DragDropEffects.None. The drop target control must also check the data format of the IDragObject, passed as the DragEventArgs.Data property, by calling a version of the IDragObject.GetDataPresent() overload method.
 
-    private void TargetControl\_DragEnter(object sender, DragEventArgs e)
+    private void TargetControl_DragEnter(object sender, DragEventArgs e)
     {
         if (e.Data.GetDataPresent(DataFormats.Text))
             if ((e.AllowedEffect & DragDropEffects.Copy) == DragDropEffects.Copy)
@@ -3525,7 +3525,7 @@ Setting the DragEventArgs.Effect to a concrete value (Copy, Move or Link) change
 
 Inside the DragDrop event handler the drop target control handles the dragged data.
 
-    private void TargetControl\_DragDrop(object sender, DragEventArgs e)
+    private void TargetControl_DragDrop(object sender, DragEventArgs e)
     {
         if (e.Data.GetDataPresent(DataFormats.Text))
         {
@@ -3546,27 +3546,27 @@ Here is a drag and drop example with a form and two controls: a TextBox which is
             InitializeComponent();
 
 
-            /\* The AllowDrop property must be set to true for a control to act as a drag and drop target  \*/
+            /* The AllowDrop property must be set to true for a control to act as a drag and drop target  */
             lboTarget.AllowDrop = true;
         }
 
 
-        /\* A source control initiates the drag and drop operation by calling the DoDragDrop() method \*/
-        private void txtSource\_MouseDown(object sender, MouseEventArgs e)
+        /* A source control initiates the drag and drop operation by calling the DoDragDrop() method */
+        private void txtSource_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
                 txtSource.DoDragDrop(txtSource.Text, DragDropEffects.Copy);
         }
 
-        /\* The DragEnter event occurs on a target control when the mouse pointer enters the control \*/
-        private void lboTarget\_DragEnter(object sender, DragEventArgs e)
+        /* The DragEnter event occurs on a target control when the mouse pointer enters the control */
+        private void lboTarget_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
                 e.Effect = DragDropEffects.Copy;
         }
 
-        /\* The DragDrop event occurs on a target control when the user releases the mouse button \*/
-        private void lboTarget\_DragDrop(object sender, DragEventArgs e)
+        /* The DragDrop event occurs on a target control when the user releases the mouse button */
+        private void lboTarget_DragDrop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.Text))
             {
@@ -3584,14 +3584,14 @@ Here is another drag and drop example. The drag source and the drop target are t
         {
             InitializeComponent();
 
-            /\* The AllowDrop property must be set to true for a control to act as a drag and drop target.  \*/
+            /* The AllowDrop property must be set to true for a control to act as a drag and drop target.  */
             lboTarget.AllowDrop = true;
 
             lboSource.Items.Add(new Person("John Doe", 32));
             lboSource.Items.Add(new Person("Jane Doe", 30));
         }
 
-        /\* A source control initiates the drag and drop operation by calling the DoDragDrop() method.
+        /* A source control initiates the drag and drop operation by calling the DoDragDrop() method.
           
            The DoDragDrop() returns the final effect of the operation, so this event handler
            removes the dragged item from the list box on success. 
@@ -3601,35 +3601,35 @@ Here is another drag and drop example. The drag source and the drop target are t
           
            The name of that custom format could be any string as long as it is unique among all
            other formats.
-         \*/
-        private void lboSource\_MouseDown(object sender, MouseEventArgs e)
+         */
+        private void lboSource_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
                 if (lboSource.SelectedIndex != -1)
                 {
                     DataObject DataObj = new DataObject();
 
-                    /\* The lboSource.SelectedItem is a Person object \*/
+                    /* The lboSource.SelectedItem is a Person object */
                     DataObj.SetData("Lessons.Person", lboSource.SelectedItem);
 
-                    /\* if DoDragDrop() succeeds then remove the item from the list \*/
+                    /* if DoDragDrop() succeeds then remove the item from the list */
                     if (lboSource.DoDragDrop(DataObj, DragDropEffects.Move) == DragDropEffects.Move)
                         lboSource.Items.Remove(lboSource.SelectedItem);
                 }
         }
 
-        /\* The DragEnter event occurs on a target control when the mouse pointer enters the control \*/
-        private void lboTarget\_DragEnter(object sender, DragEventArgs e)
+        /* The DragEnter event occurs on a target control when the mouse pointer enters the control */
+        private void lboTarget_DragEnter(object sender, DragEventArgs e)
         {
-            /\* check to see if the custom format Lessons.Person exists in the DataObject  \*/
+            /* check to see if the custom format Lessons.Person exists in the DataObject  */
             if (e.Data.GetDataPresent("Lessons.Person"))
                 if (e.AllowedEffect == DragDropEffects.Move)
                     e.Effect = DragDropEffects.Move;
         }
 
-        /\* The DragDrop event occurs on a target control when the user releases the mouse button.
-           If the e.Data DataObject carries a Person object then add it to the source ListBox \*/
-        private void lboTarget\_DragDrop(object sender, DragEventArgs e)
+        /* The DragDrop event occurs on a target control when the user releases the mouse button.
+           If the e.Data DataObject carries a Person object then add it to the source ListBox */
+        private void lboTarget_DragDrop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent("Lessons.Person"))
             {
@@ -3641,8 +3641,8 @@ Here is another drag and drop example. The drag source and the drop target are t
     }
 
 
-    /\* This class is used in the drag and drop operation \*/
-    \[Serializable\]
+    /* This class is used in the drag and drop operation */
+    [Serializable]
     public class Person
     {
         public Person(): this("John Doe", 32)
@@ -3677,17 +3677,17 @@ The third examble demonstrates dragging and dropping files from File Explorer. A
             lboTarget.AllowDrop = true;
         }
 
-        private void lboTarget\_DragEnter(object sender, DragEventArgs e)
+        private void lboTarget_DragEnter(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
                 e.Effect = DragDropEffects.Link;
         }
 
-        private void lboTarget\_DragDrop(object sender, DragEventArgs e)
+        private void lboTarget_DragDrop(object sender, DragEventArgs e)
         {
             if (e.Data.GetDataPresent(DataFormats.FileDrop))
             {
-                string\[\] Files = (string\[\])e.Data.GetData(DataFormats.FileDrop);
+                string[] Files = (string[])e.Data.GetData(DataFormats.FileDrop);
                 foreach (string File in Files)
                     lboTarget.Items.Add(File);
             }
@@ -3718,7 +3718,7 @@ Drag and drop operations use that Windows clipboard to move data from one place 
         public static Image GetImage();
         public static string GetText();
         public static string GetText(TextDataFormat format);
-        public static void SetAudio(byte\[\] audioBytes);
+        public static void SetAudio(byte[] audioBytes);
         public static void SetAudio(Stream audioStream);
         public static void SetData(string format, object data);
         public static void SetDataObject(object data);
@@ -3820,7 +3820,7 @@ The ErrorProvider displays a flashing icon next to a non-validated control. When
 
 There are some ways to use the ErrorProvider. One is to call its SetError() method to indicate what went wrong and where. This is usually done from inside a Validating event handler.
 
-    private void textBox1\_Validating(object sender, CancelEventArgs e)
+    private void textBox1_Validating(object sender, CancelEventArgs e)
     {
         TextBox textBox = sender as TextBox;
         
@@ -3842,11 +3842,11 @@ Another way is to use the DataSource and maybe the DataMember properties of the 
     
     ...
     
-    private void btnSave\_Click(object sender, EventArgs e)
+    private void btnSave_Click(object sender, EventArgs e)
     {
-        DataRow Row = table.Rows\[0\];
+        DataRow Row = table.Rows[0];
 
-        if ((Row\["Code"\] == DBNull.Value) || ("" == (string)(Row\["Code"\])))
+        if ((Row["Code"] == DBNull.Value) || ("" == (string)(Row["Code"])))
         {
             Row.RowError = "Invalid Code";
             Row.SetColumnError("Code", "Invalid Code");
@@ -3862,7 +3862,7 @@ Another way is to use the DataSource and maybe the DataMember properties of the 
 
 To clear the errors use the ErrorProvider.SetError() passing an empty string
 
-    private void AnyControl\_Validated(object sender, EventArgs e)
+    private void AnyControl_Validated(object sender, EventArgs e)
     {
         errorProvider1.SetError((Control)sender, "");
     }    
@@ -4011,7 +4011,7 @@ Inherits from the TextBoxBase class.
         public bool CanUndo { get; }
         public override Color ForeColor { get; set; }
         public bool HideSelection { get; set; }
-        public string\[\] Lines { get; set; }
+        public string[] Lines { get; set; }
         public virtual int MaxLength { get; set; }
         public bool Modified { get; set; }
         public virtual bool Multiline { get; set; }
@@ -4109,7 +4109,7 @@ The TextBox has a 64K character capacity limit.
         public bool HidePromptOnLeave { get; set; }
         public InsertKeyMode InsertKeyMode { get; set; }
         public bool IsOverwriteMode { get; }
-        public string\[\] Lines { get; set; }
+        public string[] Lines { get; set; }
         public string Mask { get; set; }
         public bool MaskCompleted { get; }
         public MaskedTextProvider MaskedTextProvider { get; }
@@ -4189,7 +4189,7 @@ The design time support of the Mask property provides a dialog box for selecting
         public override int SelectionLength { get; set; }
         public bool SelectionProtected { get; set; }
         public int SelectionRightIndent { get; set; }
-        public int\[\] SelectionTabs { get; set; }
+        public int[] SelectionTabs { get; set; }
         public RichTextBoxSelectionTypes SelectionType { get; }
         public bool ShowSelectionMargin { get; set; }
         public override string Text { get; set; }
@@ -4215,11 +4215,11 @@ The design time support of the Mask property provides a dialog box for selecting
 
         public bool CanPaste(DataFormats.Format clipFormat);
         public void DrawToBitmap(Bitmap bitmap, Rectangle targetBounds);
-        public int Find(char\[\] characterSet);
+        public int Find(char[] characterSet);
         public int Find(string str);
-        public int Find(char\[\] characterSet, int start);
+        public int Find(char[] characterSet, int start);
         public int Find(string str, RichTextBoxFinds options);
-        public int Find(char\[\] characterSet, int start, int end);
+        public int Find(char[] characterSet, int start, int end);
         public int Find(string str, int start, RichTextBoxFinds options);
         public int Find(string str, int start, int end, RichTextBoxFinds options);
         public override int GetCharIndexFromPosition(Point pt);
@@ -4265,7 +4265,7 @@ The RichTextBox has not any character capacity limit.
 
 see also:
 
-*   [http://en.wikipedia.org/wiki/Rich\_Text\_Format](   http://en.wikipedia.org/wiki/Rich_Text_Format)
+*   [http://en.wikipedia.org/wiki/Rich_Text_Format](   http://en.wikipedia.org/wiki/Rich_Text_Format)
 
 #### List controls: ComboBox, ListBox and CheckedListBox
 
@@ -4526,11 +4526,11 @@ Here is an example.
     {
         public MonthCalendar();
 
-        public DateTime\[\] AnnuallyBoldedDates { get; set; }
+        public DateTime[] AnnuallyBoldedDates { get; set; }
         public override Color BackColor { get; set; }
         public override Image BackgroundImage { get; set; }
         public override ImageLayout BackgroundImageLayout { get; set; }
-        public DateTime\[\] BoldedDates { get; set; }
+        public DateTime[] BoldedDates { get; set; }
         public Size CalendarDimensions { get; set; }
         public Day FirstDayOfWeek { get; set; }
         public override Color ForeColor { get; set; }
@@ -4538,7 +4538,7 @@ Here is an example.
         public DateTime MaxDate { get; set; }
         public int MaxSelectionCount { get; set; }
         public DateTime MinDate { get; set; }
-        public DateTime\[\] MonthlyBoldedDates { get; set; }
+        public DateTime[] MonthlyBoldedDates { get; set; }
         public Padding Padding { get; set; }
         public virtual bool RightToLeftLayout { get; set; }
         public int ScrollChange { get; set; }
@@ -4851,9 +4851,9 @@ Here is an example.
     {
         public TreeNode();
         public TreeNode(string text);
-        public TreeNode(string text, TreeNode\[\] children);
+        public TreeNode(string text, TreeNode[] children);
         public TreeNode(string text, int imageIndex, int selectedImageIndex);
-        public TreeNode(string text, int imageIndex, int selectedImageIndex, TreeNode\[\] children);
+        public TreeNode(string text, int imageIndex, int selectedImageIndex, TreeNode[] children);
 
         public Color BackColor { get; set; }
         public Rectangle Bounds { get; }
@@ -4917,10 +4917,10 @@ Here is an example.
         TV.Nodes.Add("i " + i.ToString());
         for (int j = 0; j < 3; j++)
         {
-            TV.Nodes\[i\].Nodes.Add("j " + j.ToString());
+            TV.Nodes[i].Nodes.Add("j " + j.ToString());
             for (int k = 0; k < 3; k++)
             {
-                TV.Nodes\[i\].Nodes\[j\].Nodes.Add("k " + k.ToString());
+                TV.Nodes[i].Nodes[j].Nodes.Add("k " + k.ToString());
             }
         }
     }
@@ -4937,8 +4937,8 @@ Here is an example of using the OpenFileDialog to load an PictureBox.
     using (OpenFileDialog Dlg = new OpenFileDialog())
     {
         Dlg.Title = "Select image";
-        Dlg.InitialDirectory = @"C:\\";
-        Dlg.Filter = "Image Files(\*.BMP;\*.JPG;\*.GIF)|\*.BMP;\*.JPG;\*.GIF|All files (\*.\*)|\*.\*";
+        Dlg.InitialDirectory = @"C:\";
+        Dlg.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
         Dlg.CheckFileExists = true;
         Dlg.CheckPathExists = true;
 
@@ -4987,14 +4987,14 @@ The PictureBox control is used to display bitmap, icon, metafile, JPEG, GIF and 
     public abstract class Image : MarshalByRefObject, ISerializable, ICloneable, IDisposable
     {
         public int Flags { get; }
-        public Guid\[\] FrameDimensionsList { get; }
+        public Guid[] FrameDimensionsList { get; }
         public int Height { get; }
         public float HorizontalResolution { get; }
         public ColorPalette Palette { get; set; }
         public SizeF PhysicalDimension { get; }
         public PixelFormat PixelFormat { get; }
-        public int\[\] PropertyIdList { get; }
-        public PropertyItem\[\] PropertyItems { get; }
+        public int[] PropertyIdList { get; }
+        public PropertyItem[] PropertyItems { get; }
         public ImageFormat RawFormat { get; }
         public Size Size { get; }
         public object Tag { get; set; }
@@ -5051,7 +5051,7 @@ affects how the control displays the image.
 
 Here is how to load an image to the PictureBox.
 
-    picBox.Image = Image.FromFile("C:\\Image.bmp");
+    picBox.Image = Image.FromFile("C:\Image.bmp");
 
 #### Menus, tool bars and status bars
 
@@ -5157,7 +5157,7 @@ The ImageList component maintains an indexed collection of same-sized images. Ma
 
 The Timer component is a simple timer. It provides the Tick event which is triggered on Interval periods, when Enabled is true.
 
-    private void Timer\_Tick(object sender, EventArgs e)
+    private void Timer_Tick(object sender, EventArgs e)
     {
         lblDateTime.Text = DateTime.Now.ToShortDateString() + "  " + DateTime.Now.ToShortTimeString();
     }    
@@ -5317,8 +5317,8 @@ Here is that class.
     namespace Lessons.Properties {
         
         
-        \[global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()\]
-        \[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "9.0.0.0")\]
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "9.0.0.0")]
         internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
             
             private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -5329,24 +5329,24 @@ Here is that class.
                 }
             }
             
-            \[global::System.Configuration.ApplicationScopedSettingAttribute()\]
-            \[global::System.Diagnostics.DebuggerNonUserCodeAttribute()\]
-            \[global::System.Configuration.DefaultSettingValueAttribute("Hi there")\]
+            [global::System.Configuration.ApplicationScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("Hi there")]
             public string AppValue {
                 get {
-                    return ((string)(this\["AppValue"\]));
+                    return ((string)(this["AppValue"]));
                 }
             }
             
-            \[global::System.Configuration.UserScopedSettingAttribute()\]
-            \[global::System.Diagnostics.DebuggerNonUserCodeAttribute()\]
-            \[global::System.Configuration.DefaultSettingValueAttribute("0")\]
+            [global::System.Configuration.UserScopedSettingAttribute()]
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.Configuration.DefaultSettingValueAttribute("0")]
             public int UserValue {
                 get {
-                    return ((int)(this\["UserValue"\]));
+                    return ((int)(this["UserValue"]));
                 }
                 set {
-                    this\["UserValue"\] = value;
+                    this["UserValue"] = value;
                 }
             }
         }
@@ -5356,27 +5356,27 @@ That Settings class resides in its own namespace. So to use that class a using d
 
 Here is how to read the AppValue and how to read and write the UserValue.
 
-    private void btnGetAppValue\_Click(object sender, EventArgs e)
+    private void btnGetAppValue_Click(object sender, EventArgs e)
     {
         MessageBox.Show(Settings.Default.AppValue);            
     }
 
-    private void btnGetUserValue\_Click(object sender, EventArgs e)
+    private void btnGetUserValue_Click(object sender, EventArgs e)
     {
         MessageBox.Show(Settings.Default.UserValue.ToString());
     }
 
-    private void btnSetUserValue\_Click(object sender, EventArgs e)
+    private void btnSetUserValue_Click(object sender, EventArgs e)
     {
         Settings.Default.UserValue = Convert.ToInt32(edtUserValue.Value);
 
-        /\* save the change \*/
+        /* save the change */
         Settings.Default.Save();
     }
 
 The mystery of where the user.config is saved, is revealed by using the System.Configuration.Configuration class and the System.Configuration.ConfigurationManager class, something that requires a reference to the System.configuration.dll assembly.
 
-    private void btnUserConfigLocation\_Click(object sender, EventArgs e)
+    private void btnUserConfigLocation_Click(object sender, EventArgs e)
     {
         Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.PerUserRoamingAndLocal);
 
@@ -5428,7 +5428,7 @@ Localized (adapted to other languages/cultures) applications, place localized st
 
 see also:
 
-*   [http://en.wikipedia.org/wiki/.NET\_assembly#Satellite\_assemblies]( http://en.wikipedia.org/wiki/.NET_assembly#Satellite_assemblies)
+*   [http://en.wikipedia.org/wiki/.NET_assembly#Satellite_assemblies]( http://en.wikipedia.org/wiki/.NET_assembly#Satellite_assemblies)
 
 #### Adding resources to a project
 
@@ -5457,13 +5457,13 @@ Here is a portion of such a Resources.resx file from an example project that con
       ...
       
       <data name="cslogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-        <value>..\\Resources\\cslogo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+        <value>..\Resources\cslogo.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
       </data>
-      <data name="string\_resource" xml:space="preserve">
+      <data name="string_resource" xml:space="preserve">
         <value>This is a resource string</value>
       </data>
       <data name="TestLib" type="System.Resources.ResXFileRef, System.Windows.Forms">
-        <value>..\\TestLib.dll;System.Byte\[\], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+        <value>..\TestLib.dll;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
       </data>
     </root>
 
@@ -5473,7 +5473,7 @@ Resource Designer provides an intuitive user interface for adding, removing and 
 
 Resource Designer provides a Resource View Selector menu, found at the top-left corner of the Resource Designer, which displays a project's resources by type. An Add Resource and Remove Resouce menu item is also provided.
 
-NOTE: MS Visual Studio 2008 installs an Image Library. This library can be found at C:\\Program Files\\Microsoft Visual Studio 9.0\\Common7\\VS2008ImageLibrary.
+NOTE: MS Visual Studio 2008 installs an Image Library. This library can be found at C:\Program Files\Microsoft Visual Studio 9.0\Common7\VS2008ImageLibrary.
 
 #### Accessing resources by code at runtime
 
@@ -5496,23 +5496,23 @@ Here is such a Resources class for a project containing three resource items:
         // class via a tool like ResGen or Visual Studio.
         // To add or remove a member, edit your .ResX file then rerun ResGen
         // with the /str option, or rebuild your VS project.
-        \[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")\]
-        \[global::System.Diagnostics.DebuggerNonUserCodeAttribute()\]
-        \[global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()\]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "2.0.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
         internal class Resources {
             
             private static global::System.Resources.ResourceManager resourceMan;
             
             private static global::System.Globalization.CultureInfo resourceCulture;
             
-            \[global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")\]
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
             internal Resources() {
             }
             
             /// <summary>
             ///   Returns the cached ResourceManager instance used by this class.
             /// </summary>
-            \[global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)\]
+            [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
             internal static global::System.Resources.ResourceManager ResourceManager {
                 get {
                     if (object.ReferenceEquals(resourceMan, null)) {
@@ -5527,7 +5527,7 @@ Here is such a Resources class for a project containing three resource items:
             ///   Overrides the current thread's CurrentUICulture property for all
             ///   resource lookups using this strongly typed resource class.
             /// </summary>
-            \[global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)\]
+            [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
             internal static global::System.Globalization.CultureInfo Culture {
                 get {
                     return resourceCulture;
@@ -5547,16 +5547,16 @@ Here is such a Resources class for a project containing three resource items:
             /// <summary>
             ///   Looks up a localized string similar to This is a resource string.
             /// </summary>
-            internal static string string\_resource {
+            internal static string string_resource {
                 get {
-                    return ResourceManager.GetString("string\_resource", resourceCulture);
+                    return ResourceManager.GetString("string_resource", resourceCulture);
                 }
             }
             
-            internal static byte\[\] TestLib {
+            internal static byte[] TestLib {
                 get {
                     object obj = ResourceManager.GetObject("TestLib", resourceCulture);
-                    return ((byte\[\])(obj));
+                    return ((byte[])(obj));
                 }
             }
         }
@@ -5568,7 +5568,7 @@ That Resources class allows easy access to any resource item added.
     
     ...
     
-    MessageBox.Show(Resources.string\_resource);
+    MessageBox.Show(Resources.string_resource);
     
     
 
@@ -5589,8 +5589,8 @@ That example project contains an unmanaged dll, written with Delphi. Here is the
 
 That dll is added as a resource item of the "file" resource type, to the project. The Resources class returns the dll as a byte array. The example project reads that dll resource item data, saves it to the disk as a dll and then calls a function provided by that dll.
 
-    /\* The TestLib resource item is an unmanaged dll. This method saves the resource
-       item to the disk \*/
+    /* The TestLib resource item is an unmanaged dll. This method saves the resource
+       item to the disk */
     static internal void PrepareDll()
     {
         string FileName = Application.StartupPath + Path.DirectorySeparatorChar + "TestLib.dll";
@@ -5598,13 +5598,13 @@ That dll is added as a resource item of the "file" resource type, to the project
             File.WriteAllBytes(FileName, Resources.TestLib);
     }
 
-    /\* import a dll function \*/
-    \[DllImport("TestLib.dll")\]
+    /* import a dll function */
+    [DllImport("TestLib.dll")]
     public static extern int Add(int X, int Y);
 
 
-    /\* call a dll function \*/
-    private void btnCallDllFunc\_Click(object sender, EventArgs e)
+    /* call a dll function */
+    private void btnCallDllFunc_Click(object sender, EventArgs e)
     {
         int Res = Add(1, 2);
         MessageBox.Show(Res.ToString());
@@ -5620,7 +5620,7 @@ MS Visual Studio IDE provides tools and FCL provides classes and types for creat
 
 see also:
 
-*   [http://en.wikipedia.org/wiki/Internationalization\_and\_localization](   http://en.wikipedia.org/wiki/Internationalization_and_localization)
+*   [http://en.wikipedia.org/wiki/Internationalization_and_localization](   http://en.wikipedia.org/wiki/Internationalization_and_localization)
 *   [http://www.i18nguy.com/](http://www.i18nguy.com/)
 
 #### The notion of culture and the CultureInfo class
@@ -5651,7 +5651,7 @@ Here is, for example, the names of the English cultures supported by CRL.
     en-JM       English (Jamaica)      
     en-NZ       English (New Zealand)      
     en-PH       English (Philippines)      
-    en-ZA       English (South Africa      
+    en-ZA       English (South Africa)      
     en-TT       English (Trinidad and Tobago)
     en-GB       English (United Kingdom)     
     en-US       English (United States)
@@ -5689,7 +5689,7 @@ The System.Globalization.CultureInfo class represents a culture.
         public virtual string Name { get; }
         public virtual string NativeName { get; }
         public virtual NumberFormatInfo NumberFormat { get; set; }
-        public virtual Calendar\[\] OptionalCalendars { get; }
+        public virtual Calendar[] OptionalCalendars { get; }
         public virtual CultureInfo Parent { get; }
         public virtual TextInfo TextInfo { get; }
         public virtual string ThreeLetterISOLanguageName { get; }
@@ -5706,7 +5706,7 @@ The System.Globalization.CultureInfo class represents a culture.
         public static CultureInfo GetCultureInfo(string name);
         public static CultureInfo GetCultureInfo(string name, string altName);
         public static CultureInfo GetCultureInfoByIetfLanguageTag(string name);
-        public static CultureInfo\[\] GetCultures(CultureTypes types);
+        public static CultureInfo[] GetCultures(CultureTypes types);
         public virtual object GetFormat(Type formatType);
         public override int GetHashCode();
         public static CultureInfo ReadOnly(CultureInfo ci);
@@ -5720,8 +5720,8 @@ NOTE: The CultureInfo class documentation provides a full list of predefined cul
 see also:
 
 *   [http://www.ietf.org/rfc/rfc4646.txt](   http://www.ietf.org/rfc/rfc4646.txt)
-*   [http://en.wikipedia.org/wiki/ISO\_639-1](http://en.wikipedia.org/wiki/ISO_639-1)
-*   [http://en.wikipedia.org/wiki/ISO\_3166](http://en.wikipedia.org/wiki/ISO_3166)
+*   [http://en.wikipedia.org/wiki/ISO_639-1](http://en.wikipedia.org/wiki/ISO_639-1)
+*   [http://en.wikipedia.org/wiki/ISO_3166](http://en.wikipedia.org/wiki/ISO_3166)
 
 #### Invariant, neutral and specific cultures
 
@@ -5924,39 +5924,39 @@ FCL provides the System.Text.Encoding class. Here is the Encoding class declarat
         public virtual int WindowsCodePage { get; }
 
         public virtual object Clone();
-        public static byte\[\] Convert(Encoding srcEncoding, Encoding dstEncoding, byte\[\] bytes);
-        public static byte\[\] Convert(Encoding srcEncoding, Encoding dstEncoding, byte\[\] bytes, int index, int count);
+        public static byte[] Convert(Encoding srcEncoding, Encoding dstEncoding, byte[] bytes);
+        public static byte[] Convert(Encoding srcEncoding, Encoding dstEncoding, byte[] bytes, int index, int count);
         public override bool Equals(object value);
-        public virtual int GetByteCount(char\[\] chars);
+        public virtual int GetByteCount(char[] chars);
         public virtual int GetByteCount(string s);
-        public virtual int GetByteCount(char\* chars, int count);
-        public abstract int GetByteCount(char\[\] chars, int index, int count);
-        public virtual byte\[\] GetBytes(char\[\] chars);
-        public virtual byte\[\] GetBytes(string s);
-        public virtual byte\[\] GetBytes(char\[\] chars, int index, int count);
-        public virtual int GetBytes(char\* chars, int charCount, byte\* bytes, int byteCount);
-        public abstract int GetBytes(char\[\] chars, int charIndex, int charCount, byte\[\] bytes, int byteIndex);
-        public virtual int GetBytes(string s, int charIndex, int charCount, byte\[\] bytes, int byteIndex);
-        public virtual int GetCharCount(byte\[\] bytes);
-        public virtual int GetCharCount(byte\* bytes, int count);
-        public abstract int GetCharCount(byte\[\] bytes, int index, int count);
-        public virtual char\[\] GetChars(byte\[\] bytes);
-        public virtual char\[\] GetChars(byte\[\] bytes, int index, int count);
-        public virtual int GetChars(byte\* bytes, int byteCount, char\* chars, int charCount);
-        public abstract int GetChars(byte\[\] bytes, int byteIndex, int byteCount, char\[\] chars, int charIndex);
+        public virtual int GetByteCount(char* chars, int count);
+        public abstract int GetByteCount(char[] chars, int index, int count);
+        public virtual byte[] GetBytes(char[] chars);
+        public virtual byte[] GetBytes(string s);
+        public virtual byte[] GetBytes(char[] chars, int index, int count);
+        public virtual int GetBytes(char chars, int charCount, byte* bytes, int byteCount);
+        public abstract int GetBytes(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex);
+        public virtual int GetBytes(string s, int charIndex, int charCount, byte[] bytes, int byteIndex);
+        public virtual int GetCharCount(byte[] bytes);
+        public virtual int GetCharCount(byte* bytes, int count);
+        public abstract int GetCharCount(byte[] bytes, int index, int count);
+        public virtual char[] GetChars(byte[] bytes);
+        public virtual char[] GetChars(byte[] bytes, int index, int count);
+        public virtual int GetChars(byte* bytes, int byteCount, char* chars, int charCount);
+        public abstract int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex);
         public virtual Decoder GetDecoder();
         public virtual Encoder GetEncoder();
         public static Encoding GetEncoding(int codepage);
         public static Encoding GetEncoding(string name);
         public static Encoding GetEncoding(int codepage, EncoderFallback encoderFallback, DecoderFallback decoderFallback);
         public static Encoding GetEncoding(string name, EncoderFallback encoderFallback, DecoderFallback decoderFallback);
-        public static EncodingInfo\[\] GetEncodings();
+        public static EncodingInfo[] GetEncodings();
         public override int GetHashCode();
         public abstract int GetMaxByteCount(int charCount);
         public abstract int GetMaxCharCount(int byteCount);
-        public virtual byte\[\] GetPreamble();
-        public virtual string GetString(byte\[\] bytes);
-        public virtual string GetString(byte\[\] bytes, int index, int count);
+        public virtual byte[] GetPreamble();
+        public virtual string GetString(byte[] bytes);
+        public virtual string GetString(byte[] bytes, int index, int count);
         public bool IsAlwaysNormalized();
         public virtual bool IsAlwaysNormalized(NormalizationForm form);
     }
@@ -5985,21 +5985,21 @@ An encoding operation transforms text data of a certain encoding to an array of 
 
 The Encoding.GetBytes() method
 
-    public virtual byte\[\] GetBytes(string s);
-    public virtual byte\[\] GetBytes(char\[\] chars);    
-    public virtual byte\[\] GetBytes(char\[\] chars, int index, int count);
+    public virtual byte[] GetBytes(string s);
+    public virtual byte[] GetBytes(char[] chars);    
+    public virtual byte[] GetBytes(char[] chars, int index, int count);
     
 
 encodes a string to an array of bytes. The Encoding.Convert() method
 
-    public static byte\[\] Convert(Encoding srcEncoding, Encoding dstEncoding, byte\[\] bytes);
-    public static byte\[\] Convert(Encoding srcEncoding, Encoding dstEncoding, byte\[\] bytes, int index, int count);
+    public static byte[] Convert(Encoding srcEncoding, Encoding dstEncoding, byte[] bytes);
+    public static byte[] Convert(Encoding srcEncoding, Encoding dstEncoding, byte[] bytes, int index, int count);
     
 
 converts that byte array from one Encoding to another. The Encoding.GetString() method
 
-    public virtual string GetString(byte\[\] bytes);
-    public virtual string GetString(byte\[\] bytes, int index, int count);
+    public virtual string GetString(byte[] bytes);
+    public virtual string GetString(byte[] bytes, int index, int count);
     
 
 decodes a byte array to a string.
@@ -6010,8 +6010,8 @@ Here is an example.
     Encoding DestEnc = Encoding.GetEncoding("windows-1253");
 
     string SourceString = "test string";
-    byte\[\] SourceBytes = SourceEnc.GetBytes(SourceString);
-    byte\[\] DestBytes = Encoding.Convert(SourceEnc, DestEnc, SourceBytes);
+    byte[] SourceBytes = SourceEnc.GetBytes(SourceString);
+    byte[] DestBytes = Encoding.Convert(SourceEnc, DestEnc, SourceBytes);
     string DestString = DestEnc.GetString(DestBytes);
 
     MessageBox.Show(DestString);
@@ -6163,7 +6163,7 @@ An application performs a culture-sensitive comparison when a sort operation
 
 The CompareOptions enum defines a set of possible options for string comparisons.
 
-    \[FlagsAttribute\]
+    [FlagsAttribute]
     public enum CompareOptions
     {
         None = 0,
@@ -6206,7 +6206,7 @@ of type System.Globalization.NumberFormatInfo class. Here is the class declarati
         public int CurrencyDecimalDigits { get; set; }
         public string CurrencyDecimalSeparator { get; set; }
         public string CurrencyGroupSeparator { get; set; }
-        public int\[\] CurrencyGroupSizes { get; set; }
+        public int[] CurrencyGroupSizes { get; set; }
         public int CurrencyNegativePattern { get; set; }
         public int CurrencyPositivePattern { get; set; }
         public string CurrencySymbol { get; set; }
@@ -6215,18 +6215,18 @@ of type System.Globalization.NumberFormatInfo class. Here is the class declarati
         public static NumberFormatInfo InvariantInfo { get; }
         public bool IsReadOnly { get; }
         public string NaNSymbol { get; set; }
-        public string\[\] NativeDigits { get; set; }
+        public string[] NativeDigits { get; set; }
         public string NegativeInfinitySymbol { get; set; }
         public string NegativeSign { get; set; }
         public int NumberDecimalDigits { get; set; }
         public string NumberDecimalSeparator { get; set; }
         public string NumberGroupSeparator { get; set; }
-        public int\[\] NumberGroupSizes { get; set; }
+        public int[] NumberGroupSizes { get; set; }
         public int NumberNegativePattern { get; set; }
         public int PercentDecimalDigits { get; set; }
         public string PercentDecimalSeparator { get; set; }
         public string PercentGroupSeparator { get; set; }
-        public int\[\] PercentGroupSizes { get; set; }
+        public int[] PercentGroupSizes { get; set; }
         public int PercentNegativePattern { get; set; }
         public int PercentPositivePattern { get; set; }
         public string PercentSymbol { get; set; }
@@ -6265,15 +6265,15 @@ of type System.Globalization.DateTimeFormatInfo class. Here is the class declara
     {
         public DateTimeFormatInfo();
 
-        public string\[\] AbbreviatedDayNames { get; set; }
-        public string\[\] AbbreviatedMonthGenitiveNames { get; set; }
-        public string\[\] AbbreviatedMonthNames { get; set; }
+        public string[] AbbreviatedDayNames { get; set; }
+        public string[] AbbreviatedMonthGenitiveNames { get; set; }
+        public string[] AbbreviatedMonthNames { get; set; }
         public string AMDesignator { get; set; }
         public Calendar Calendar { get; set; }
         public CalendarWeekRule CalendarWeekRule { get; set; }
         public static DateTimeFormatInfo CurrentInfo { get; }
         public string DateSeparator { get; set; }
-        public string\[\] DayNames { get; set; }
+        public string[] DayNames { get; set; }
         public DayOfWeek FirstDayOfWeek { get; set; }
         public string FullDateTimePattern { get; set; }
         public static DateTimeFormatInfo InvariantInfo { get; }
@@ -6281,13 +6281,13 @@ of type System.Globalization.DateTimeFormatInfo class. Here is the class declara
         public string LongDatePattern { get; set; }
         public string LongTimePattern { get; set; }
         public string MonthDayPattern { get; set; }
-        public string\[\] MonthGenitiveNames { get; set; }
-        public string\[\] MonthNames { get; set; }
+        public string[] MonthGenitiveNames { get; set; }
+        public string[] MonthNames { get; set; }
         public string NativeCalendarName { get; }
         public string PMDesignator { get; set; }
         public string RFC1123Pattern { get; }
         public string ShortDatePattern { get; set; }
-        public string\[\] ShortestDayNames { get; set; }
+        public string[] ShortestDayNames { get; set; }
         public string ShortTimePattern { get; set; }
         public string SortableDateTimePattern { get; }
         public string TimeSeparator { get; set; }
@@ -6298,8 +6298,8 @@ of type System.Globalization.DateTimeFormatInfo class. Here is the class declara
         public string GetAbbreviatedDayName(DayOfWeek dayofweek);
         public string GetAbbreviatedEraName(int era);
         public string GetAbbreviatedMonthName(int month);
-        public string\[\] GetAllDateTimePatterns();
-        public string\[\] GetAllDateTimePatterns(char format);
+        public string[] GetAllDateTimePatterns();
+        public string[] GetAllDateTimePatterns(char format);
         public string GetDayName(DayOfWeek dayofweek);
         public int GetEra(string eraName);
         public string GetEraName(int era);
@@ -6308,7 +6308,7 @@ of type System.Globalization.DateTimeFormatInfo class. Here is the class declara
         public string GetMonthName(int month);
         public string GetShortestDayName(DayOfWeek dayOfWeek);
         public static DateTimeFormatInfo ReadOnly(DateTimeFormatInfo dtfi);
-        public void SetAllDateTimePatterns(string\[\] patterns, char format);
+        public void SetAllDateTimePatterns(string[] patterns, char format);
     }
 
 The DateTimeFormatInfo class provides information, such as the Calendar, the DateSeparator etc.
@@ -6336,7 +6336,7 @@ of type System.Globalization.Calendar class. Here is the class declaration.
         public const int CurrentEra = 0;
 
         public virtual CalendarAlgorithmType AlgorithmType { get; }
-        public abstract int\[\] Eras { get; }
+        public abstract int[] Eras { get; }
         public bool IsReadOnly { get; }
         public virtual DateTime MaxSupportedDateTime { get; }
         public virtual DateTime MinSupportedDateTime { get; }
@@ -6483,12 +6483,12 @@ Changing the Language property of the form back to (Default) restores the origin
 
 After building the project, the .resources files are placed in the
 
-    \\obj\\Debug
+    \obj\Debug
     
 
 folder, while the .resources.dll satellite assemblies are placed in the
 
-    \\bin\\Debug
+    \bin\Debug
     
 
 folder, inside their language/culture specific sub-folder.
